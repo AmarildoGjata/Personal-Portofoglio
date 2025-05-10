@@ -14,7 +14,7 @@ const Home = () => {
         <div className='font-extrabold md:text-[55px] text-[30px]'>Amarildo Gjata</div>
         <div className='font-extrabold md:text-[32px] text-[20px] mb-5'>Junior FullStack Developer</div>
         <p className='font-bold md:text-[16px] sm:text-[12] mb-5'>
-        I'm a Junior Full-Stack Developer with a strong foundation in both frontend and backend technologies, currently working as a Quality Assurance Specialist. I have hands-on experience with HTML, CSS, responsive design, Tailwind CSS, React, Python, Django, PostgreSQL, and SQL. I also work with tools like Postman for API testing and Git for version control. Currently, I'm expanding my skills through ongoing training in the MERN stack (MongoDB, Express.js, React, Node.js), aiming to transition into a full-time development role. I’m passionate about building clean, user-friendly applications and continuously improving my technical skill set.
+        I'm a Junior Full-Stack Developer with a strong foundation in both frontend and backend technologies, currently working as a Quality Assurance Specialist. I have hands-on experience with HTML, CSS, responsive design, Tailwind CSS, React, Python, Django, PostgreSQL, and SQL. I also work with tools like Postman for API testing and Git for version control. Currently, I'm expanding my skills through ongoing training in the MERN stack (MongoDB, Express.js, React, Node.js), aiming to transition into a full-time development role. I'm passionate about building clean, user-friendly applications and continuously improving my technical skill set.
         </p>
         <a href={DeveloperCv} download='DeveloperCv' target='_blank'>
           <CustomButton title='Download CV'/>
