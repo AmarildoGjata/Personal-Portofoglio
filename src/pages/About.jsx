@@ -10,8 +10,8 @@ const About = () => {
     { name: 'JavaScript', icon: 'bx bxl-javascript' },
     { name: 'Python', icon: 'bx bxl-python' },
     { name: 'React', icon: 'bx bxl-react' },
-    { name: 'Node.js', icon: 'bx bxl-nodejs' },
-    { name: 'MongoDB', icon: 'bx bxs-data' },
+    { name: 'Django', icon: 'bx bxl-nodejs' },
+    { name: 'PostgreSQL', icon: 'bx bxs-data' },
     { name: 'Git', icon: 'bx bxl-git' }
   ];
 
