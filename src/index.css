@@ -1,0 +1,11 @@
+@import "tailwindcss";
+
+*{
+    font-family: "Poppins", sans-serif;
+    font-weight: 600;
+    font-style: normal;  
+}
+
+:root{
+    --main-color: #7cf03d;
+}
