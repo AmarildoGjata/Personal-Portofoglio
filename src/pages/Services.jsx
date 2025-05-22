@@ -5,6 +5,8 @@ import { useState } from "react";
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
+import IconContainer from '../components/IconContainer';
+
 const services = [
   {
     icon: 'bx-code-alt',
