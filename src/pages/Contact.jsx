@@ -49,14 +49,13 @@ const Contact = () => {
     )
       .then((response) => {
         console.log(response);
+        setEmail('');
+        setName('');
+        setMessage('');
       })
       .catch((error) => {
         console.log(error);
       });
-
-      setEmail('');
-      setName('');
-      setMessage('');
   }
 
   const handleSubmit = (e) => {
@@ -136,9 +135,9 @@ const Contact = () => {
         </div>
 
         <div className="mt-8 flex space-x-4 animate-fadeIn" style={{ animationDelay: '0.4s' }}>
-          <IconContainer link='https://www.facebook.com/' children={<FaFacebookF />} />
-          <IconContainer link='https://www.linkedin.com/' children={<FaLinkedinIn />} />
-          <IconContainer link='https://github.com' children={<FaGithub />} />
+          <IconContainer link='https://www.facebook.com/share/16NTYmtgfq/' children={<FaFacebookF />} />
+          <IconContainer link='www.linkedin.com/in/amarildo-gjata-535a1783' children={<FaLinkedinIn />} />
+          <IconContainer link='https://github.com/AmarildoGjata' children={<FaGithub />} />
         </div>
       </section>
     </div>
