@@ -49,6 +49,7 @@ const Contact = () => {
     )
       .then((response) => {
         console.log(response);
+        console.log('Email sent successfully');
         setEmail('');
         setName('');
         setMessage('');
