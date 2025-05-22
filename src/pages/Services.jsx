@@ -45,6 +45,12 @@ const Services = () => {
                   </div>
                 ))
               }
+
+            <div className='mt-12 lg:w-1/5 md:1/2 w-1/3 flex justify-between'>
+            <IconContainer link='https://www.facebook.com/share/16NTYmtgfq/' children={<FaFacebookF />}/>
+            <IconContainer link='htttps://www.linkedin.com/in/amarildo-gjata-535a1783' children={<FaLinkedinIn />}/>
+            <IconContainer link='https://github.com/AmarildoGjata' children={<FaGithub />}/>
+            </div>
             </div>
       </section>
     </div>
