@@ -6,10 +6,6 @@ import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
 import IconContainer from '../components/IconContainer';
 
-import.meta.env.VITE_EMAIL_INIT_PUBLIC_KEY
-import.meta.env.VITE_EMAIL_SERVICE_KEY
-import.meta.env.VITE_EMAIL_TEMPLATE_KEY
-
 const Contact = () => {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -17,6 +13,14 @@ const Contact = () => {
 
   const [status, setStatus] = useState(null);
   const [errors, setErrors] = useState({});
+
+  const resetState = () => {
+    setName('');
+    setEmail('');
+    setMessage('');
+    setStatus(null);
+    setErrors({});
+  };
 
   const validateForm = () => {
     const newErrors = {};
@@ -37,10 +41,10 @@ const Contact = () => {
   };
 
   function sendMail() {
-    emailjs.init(VITE_EMAIL_INIT_PUBLIC_KEY); // Merret nga dashboardi -> account -> public key
+    emailjs.init(import.meta.env.VITE_EMAIL_INIT_PUBLIC_KEY); // Merret nga dashboardi -> account -> public key
     emailjs.send(
-      VITE_EMAIL_SERVICE_KEY, // Merret nga dashboardi -> service id
-      VITE_EMAIL_TEMPLATE_KEY, // Merret nga dashboardi -> templates -> settings -> template id
+      import.meta.env.VITE_EMAIL_SERVICE_KEY, // Merret nga dashboardi -> service id
+      import.meta.env.VITE_EMAIL_TEMPLATE_KEY, // Merret nga dashboardi -> templates -> settings -> template id
       {
         to_email: email,
         subject: `Hi`,
@@ -49,10 +53,11 @@ const Contact = () => {
     )
       .then((response) => {
         console.log(response);
-        console.log('Email sent successfully');
-        setEmail('');
-        setName('');
-        setMessage('');
+        return response.data
+      })
+      .then((data) => {
+        resetState();
+        setStatus('success');
       })
       .catch((error) => {
         console.log(error);
@@ -92,6 +97,7 @@ const Contact = () => {
                 onChange={handleNameChange}
                 className="w-full p-3 bg-gray-800 border border-[var(--main-color)] rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-[var(--main-color)]"
                 placeholder="Your Name"
+                value={name}
               />
               {errors.name && <p className="text-red-400 text-sm mt-1">{errors.name}</p>}
             </div>
@@ -104,6 +110,7 @@ const Contact = () => {
                 onChange={handleEmailChange}
                 className="w-full p-3 bg-gray-800 border border-[var(--main-color)] rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-[var(--main-color)]"
                 placeholder="Your Email"
+                value={email}
               />
               {errors.email && <p className="text-red-400 text-sm mt-1">{errors.email}</p>}
             </div>
@@ -116,6 +123,7 @@ const Contact = () => {
                 className="w-full p-3 bg-gray-800 border border-[var(--main-color)] rounded-lg text-white focus:outline-none focus:ring-2 focus:ring-[var(--main-color)]"
                 rows="5"
                 placeholder="Your Message"
+                value={message}
               ></textarea>
               {errors.message && <p className="text-red-400 text-sm mt-1">{errors.message}</p>}
             </div>
