@@ -12,7 +12,11 @@ const About = () => {
     { name: 'React', icon: 'bx bxl-react' },
     { name: 'Django', icon: 'bx bxl-nodejs' },
     { name: 'PostgreSQL', icon: 'bx bxs-data' },
-    { name: 'Git', icon: 'bx bxl-git' }
+    { name: 'Git', icon: 'bx bxl-git' },
+    { name: 'Postman', icon: 'bx bxl-postman' },
+    { name: 'MongoDB', icon: 'bx bxl-mongodb' },
+    { name: 'Swagger', icon: 'bx bxl-swagger' },
+    { name: 'Express', icon: 'bx bxl-express' },
   ];
 
   return (

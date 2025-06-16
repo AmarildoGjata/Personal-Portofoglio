@@ -14,7 +14,13 @@ const Home = () => {
         <div className="text-4xl font-bold text-[var(--main-color)] mt-10 text-center animate-fadeIn">Amarildo Gjata</div>
         <div className="text-3xl font-bold text-[var(--main-color)] mb-10 text-center animate-fadeIn">Junior FullStack Developer</div>
         <p className='font-bold md:text-[16px] sm:text-[12] mb-5'>
-        I'm a Junior Full-Stack Developer with a strong foundation in both frontend and backend technologies, currently working as a Quality Assurance Specialist. I have hands-on experience with HTML, CSS, responsive design, Tailwind CSS, React, Python, Django, PostgreSQL, and SQL. I also work with tools like Postman for API testing and Git for version control. Currently, I'm expanding my skills through ongoing training in the MERN stack (MongoDB, Express.js, React, Node.js), aiming to transition into a full-time development role. I'm passionate about building clean, user-friendly applications and continuously improving my technical skill set.
+        Welcome to my portfolio, where I showcase my growing expertise as a junior full-stack developer passionate about creating functional and user-friendly web applications. With foundational skills in JavaScript, React, HTML, CSS, Express, Django, Python, PostgreSQL, MySQL, Git, Postman, and Swagger, I’m dedicated to building impactful solutions while continuously expanding my technical knowledge.
+
+I use JavaScript and React alongside HTML and CSS to develop responsive, engaging front-end interfaces that prioritize user experience. On the back end, I work with Express and Django in Python to create reliable APIs and server-side functionality, learning to implement best practices for clean and efficient code. I’m comfortable managing databases with PostgreSQL and MySQL, ensuring data is structured and accessible.
+
+Using Git, I maintain organized version control and collaborate effectively on projects. I leverage Postman and Swagger to test and document APIs, ensuring seamless integration between front-end and back-end systems. My portfolio features projects that reflect my ability to tackle challenges, adapt to new tools, and deliver practical solutions as a junior developer.
+
+Explore my work to see my progress and potential. I’m eager to contribute to innovative projects, learn from experienced teams, and grow as a developer. Let’s connect to build something great together!
         </p>
         <a href={Amarildo_Gjata_CV} download='Amarildo_Gjata_CV' target='_blank'>
           <CustomButton title='Download CV'/>
