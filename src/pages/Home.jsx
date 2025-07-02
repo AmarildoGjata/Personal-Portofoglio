@@ -1,6 +1,6 @@
 import main_photo from '../assets/main_photo.png';
 import CustomButton from '../components/CostumButton';
-import Amarildo_Gjata_CV from '../assets/Amarildo_Gjata_CV.pdf';
+import Amarildo_Gjata_CV from '../assets/CV_A.Gjata.pdf';
 import { FaFacebookF } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { FaGithub } from "react-icons/fa";
@@ -22,7 +22,7 @@ Using Git, I maintain organized version control and collaborate effectively on p
 
 Explore my work to see my progress and potential. I’m eager to contribute to innovative projects, learn from experienced teams, and grow as a developer. Let’s connect to build something great together!
         </p>
-        <a href={Amarildo_Gjata_CV} download='Amarildo_Gjata_CV' target='_blank'>
+        <a href={Amarildo_Gjata_CV} download='CV_A.Gjata.pdf' target='_blank'>
           <CustomButton title='Download CV'/>
         </a>
 

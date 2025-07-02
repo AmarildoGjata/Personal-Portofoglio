@@ -10,12 +10,12 @@ const services = [
   {
     icon: 'bx-code-alt',
     title: 'Frontend Development',
-    description: 'Building responsive and interactive user interfaces using HTML, CSS, JavaScript, and React Framework for seamless user experiences.'
+    description: 'Building responsive and interactive user interfaces using HTML, CSS, JavaScript,Typescript, and React Framework for seamless user experiences.'
   },
   {
     icon: 'bx-server',
     title: 'Backend Development',
-    description: 'Creating robust server-side applications with Python , Django and Node.js, including API development and database management with MongoDB,Sql Lite,PostgreSQL.'
+    description: 'Creating robust server-side applications with Python,Django,Express and Node.js, including API development and database management with MongoDB,Sql Lite,PostgreSQL and Sql.'
   },
   {
     icon: 'bx-git-branch',
