@@ -8,11 +8,12 @@ export default function Navbar() {
     <nav className="bg-black shadow-md">
       <div className="max-w-full mx-auto md:pl-40 md:pr-20 lg:pr-80 px-12">
         <div className="flex justify-between items-center h-16">
-          <div className="text-4xl font-bold text-white">Portofolio</div>
+          <div className="text-4xl text-white hover:text-[var(--main-color)]">Portofolio</div>
           <div className="hidden md:flex space-x-6 text-2xl font-bold">
             <Link to='/' className="text-white hover:text-[var(--main-color)]">Home</Link>
             <Link to='/about' className="text-white hover:text-[var(--main-color)]">About</Link>
             <Link to='/services' className="text-white hover:text-[var(--main-color)]">Services</Link>
+            <Link to='/projects' className="text-white hover:text-[var(--main-color)]">Projects</Link>
             <Link to='/contact' className="text-white hover:text-[var(--main-color)]">Contact</Link>
           </div>
           <div className="md:hidden">
@@ -34,6 +35,7 @@ export default function Navbar() {
           <Link to='/' className="block text-white hover:text-[var(--main-color)]">Home</Link>
           <Link to='/about' className="block text-white hover:text-[var(--main-color)]">About</Link>
           <Link to='/services' className="block text-white hover:text-[var(--main-color)]">Services</Link>
+          <Link to='/projects' className="block text-white hover:text-[var(--main-color)]">Projects</Link>
           <Link to='/contact' className="block text-white hover:text-[var(--main-color)]">Contact</Link>
         </div>
       )}

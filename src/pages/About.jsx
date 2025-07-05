@@ -1,66 +1,89 @@
-import { FaFacebookF } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
+import React from 'react';
+import { FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import IconContainer from '../components/IconContainer';
+import Box from '../components/Box';
+import Education from '../components/Education';
 
 const About = () => {
   const skills = [
-    { name: 'HTML', icon: 'bx bxl-html5' },
-    { name: 'CSS', icon: 'bx bxl-css3' },
-    { name: 'JavaScript', icon: 'bx bxl-javascript' },
-    { name: 'Python', icon: 'bx bxl-python' },
-    { name: 'React', icon: 'bx bxl-react' },
-    { name: 'Django', icon: 'bx bxl-nodejs' },
-    { name: 'PostgreSQL', icon: 'bx bxs-data' },
-    { name: 'Git', icon: 'bx bxl-git' },
-    { name: 'Postman', icon: 'bx bxl-postman' },
-    { name: 'MongoDB', icon: 'bx bxl-mongodb' },
-    { name: 'Swagger', icon: 'bx bxl-swagger' },
-    { name: 'Express', icon: 'bx bxl-express' },
+    { property: 'Front-End', value: 'JavaScript, React, HTML, CSS' },
+    { property: 'Back-End', value: 'Express, Django, Node.js' },
+    { property: 'Databases', value: 'PostgreSQL, MongoDB' },
+    { property: 'Tools', value: 'Git, Postman, Swagger' },
   ];
 
   return (
-    <div className="min-h-screen bg-black">
-      <section className="min-h-screen px-[9%] pt-24 pb-16 flex flex-col items-center">
-        <h1 className="text-5xl font-bold text-[var(--main-color)] mb-12 text-center animate-fadeIn">About Me</h1>
-        <div className="w-full max-w-4xl flex flex-col md:flex-row gap-8">
-          <div className="flex-1 bg-gray-900 p-8 rounded-2xl border-2 border-[var(--main-color)] transform hover:shadow-[0_0_15px_#7cf03d] transition-all duration-300 animate-fadeIn">
-            <h2 className="text-3xl font-semibold text-white mb-4">Amarildo Gjata</h2>
-            <p className="text-gray-300 text-base mb-4">
-              I'm a passionate Junior Full-Stack Developer with a strong foundation in web development. I specialize in creating responsive and user-friendly applications using HTML, CSS, JavaScript, and Python. Currently, I'm honing my skills in the MERN stack (MongoDB, Express.js, React, Node.js) to build scalable and modern web solutions.
-            </p>
-            <p className="text-gray-300 text-base">
-              With a knack for problem-solving and a commitment to learning, I thrive in collaborative environments and enjoy turning ideas into reality through code. When I'm not coding, you can find me exploring new tech trends or contributing to open-source projects on GitHub.
-            </p>
-          </div>
-          <div className="flex-1 bg-gray-900 p-8 rounded-2xl border-2 border-[var(--main-color)] transform hover:shadow-[0_0_15px_#7cf03d] transition-all duration-300 animate-fadeIn" style={{ animationDelay: '0.2s' }}>
-            <h2 className="text-3xl font-semibold text-white mb-6">My Skills</h2>
-            <div className="grid grid-cols-2 gap-4">
-              {skills.map((skill, index) => (
-                <div
-                  key={index}
-                  className="flex items-center space-x-3 p-3 bg-gray-800 rounded-lg hover:bg-gray-700 transition-colors duration-200"
-                >
-                  <i className={`bx ${skill.icon} text-2xl text-[var(--main-color)]`}></i>
-                  <span className="text-white text-base">{skill.name}</span>
-                </div>
-              ))}
-            </div>
+    <section className="min-h-screen bg-black text-white font-serif flex flex-col items-center p-6 md:p-12 lg:p-16">
+      <h1 className="text-4xl md:text-5xl font-bold text-[var(--main-color)] mb-10 text-center animate-fadeIn">
+        About Me
+      </h1>
+
+      <div className="w-full max-w-3xl flex flex-col gap-6">
+        <div className="bg-gray-900 p-6 rounded-xl border-2 border-[var(--main-color)] shadow-md hover:shadow-lg hover:bg-green-900 hover:text-black transition-all duration-300 ease-in-out">
+          <h2 className="text-xl md:text-2xl font-semibold text-[var(--main-color)] mb-4 group-hover:text-black">
+            Amarildo Gjata
+          </h2>
+          <p className="text-base md:text-lg text-gray-200 group-hover:text-black">
+            I'm a Junior Full-Stack Developer passionate about building responsive, user-friendly web applications. Proficient in the MERN stack and Python frameworks, I focus on creating scalable solutions and thrive in collaborative, innovative environments.
+          </p>
+        </div>
+
+        <div className="bg-gray-900 p-6 rounded-xl border-2 border-[var(--main-color)] shadow-md hover:shadow-lg hover:bg-green-900 hover:text-black transition-all duration-300 ease-in-out">
+          <h2 className="text-xl md:text-2xl font-semibold text-[var(--main-color)] mb-4 group-hover:text-black">
+            My Skills
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            {skills.map((skill, index) => (
+              <Box
+                key={index}
+                property={skill.property}
+                value={skill.value}
+              />
+            ))}
           </div>
         </div>
 
-        <div className="mt-8 flex space-x-4 animate-fadeIn" style={{ animationDelay: '0.4s' }}>
-
-
-          <div className="mt-8 flex space-x-4 animate-fadeIn justify-space-between" style={{ animationDelay: '0.4s' }}>
-            <IconContainer link='https://www.facebook.com/share/16NTYmtgfq/' children={<FaFacebookF />} />
-            <IconContainer link='https://www.linkedin.com/in/amarildo-gjata-535a1783' children={<FaLinkedinIn />} />
-            <IconContainer link='https://github.com/AmarildoGjata' children={<FaGithub />} />
+        <div className="bg-gray-900 p-6 rounded-xl border-2 border-[var(--main-color)] shadow-md hover:shadow-lg hover:bg-green-900 hover:text-black transition-all duration-300 ease-in-out">
+          <h2 className="text-xl md:text-2xl font-semibold text-[var(--main-color)] mb-4 group-hover:text-black">
+            Education
+          </h2>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+            <Education
+              level="Bachelor's in Computer Science"
+              years="2018 - 2022"
+              description="Graduated from Metropolitan University, focusing on Computer Science and Networking."
+            />
+            <Education
+              level="Web Development Bootcamp"
+              years="2024-2025"
+              description="Completed an intensive Certification covering full-stack development with Python,Django and PostgreSQL.Ongoing Certification in MERN Stack."
+            />
           </div>
         </div>
-      </section >
-    </div >
+
+        <div className="flex justify-center gap-6 mt-6">
+          <IconContainer
+            link="https://www.facebook.com/share/16NTYmtgfq/"
+            ariaLabel="Visit Amarildo's Facebook profile"
+          >
+            <FaFacebookF className="text-xl" />
+          </IconContainer>
+          <IconContainer
+            link="https://www.linkedin.com/in/amarildo-gjata-535a1783"
+            ariaLabel="Visit Amarildo's LinkedIn profile"
+          >
+            <FaLinkedinIn className="text-xl" />
+          </IconContainer>
+          <IconContainer
+            link="https://github.com/AmarildoGjata"
+            ariaLabel="Visit Amarildo's GitHub profile"
+          >
+            <FaGithub className="text-xl" />
+          </IconContainer>
+        </div>
+      </div>
+    </section>
   );
-}
+};
 
-export default About
+export default About;

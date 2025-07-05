@@ -1,43 +1,78 @@
-import main_photo from '../assets/main_photo.png';
-import CustomButton from '../components/CostumButton';
-import Amarildo_Gjata_CV from '../assets/CV_A.Gjata.pdf';
-import { FaFacebookF } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
-import { FaGithub } from "react-icons/fa";
+import main_photo from '../assets/main_photo.jpg';
+import { FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa";
 import IconContainer from '../components/IconContainer';
+import Amarildo_Gjata_CV from '../assets/Amarildo_Gjata.pdf';
+import CostumButton from '../components/CostumButton';
 
 const Home = () => {
   return (
-    <div className='flex md:flex-row flex-col justify-between items-center bg-black text-white w-full font-serif p-4 md:px-20'>
+    <section className="relative bg-black text-white font-serif min-h-screen flex flex-col items-center justify-center p-6 md:p-12 lg:p-20">
+      <div className="flex flex-col items-center text-center animate-fadeIn">
+        <img
+          src={main_photo}
+          alt="Amarildo Gjata's profile photo"
+          className="w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full shadow-xl mb-6 transform hover:scale-105 transition-transform duration-300"
+          loading="lazy"
+        />
+        <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--main-color)]">
+          Amarildo Gjata
+        </h1>
+        <h2 className="text-xl md:text-2xl lg:text-3xl font-semibold text-gray-300 mt-2">
+          Junior FullStack Developer
+        </h2>
+      </div>
 
-      <div className='md:ml-15 md:w-1/2 w-full px-8 flex flex-col justify-center'>
-        <div className="text-4xl font-bold text-[var(--main-color)] mt-10 text-center animate-fadeIn">Amarildo Gjata</div>
-        <div className="text-3xl font-bold text-[var(--main-color)] mb-10 text-center animate-fadeIn">Junior FullStack Developer</div>
-        <p className='font-bold md:text-[16px] sm:text-[12] mb-5'>
-        Welcome to my portfolio, where I showcase my growing expertise as a junior full-stack developer passionate about creating functional and user-friendly web applications. With foundational skills in JavaScript, React, HTML, CSS, Express, Django, Python, PostgreSQL, MySQL, Git, Postman, and Swagger, I’m dedicated to building impactful solutions while continuously expanding my technical knowledge.
+      <div className="mt-12 w-full max-w-3xl bg-gray-900 rounded-xl shadow-lg p-8 transform hover:scale-[1.02] transition-transform duration-300">
+        <h3 className="text-xl md:text-2xl font-semibold text-[var(--main-color)] mb-4 text-center">
+          About Me
+        </h3>
+        <ul className="text-base md:text-lg text-gray-200 space-y-2 list-none text-center">
+          <li>Building engaging, responsive web apps with <strong>JavaScript</strong>, <strong>React</strong>, <strong>HTML</strong>, and <strong>CSS</strong>.</li>
+          <li>Creating robust APIs using <strong>Express</strong>, <strong>Django</strong>, and <strong>Python</strong>.</li>
+          <li>Managing data efficiently with <strong>PostgreSQL</strong> and <strong>MySQL</strong>.</li>
+          <li>Collaborating seamlessly with <strong>Git</strong>, <strong>Postman</strong>, and <strong>Swagger</strong>.</li>
+          <li>Ready to contribute to innovative projects—let’s create something amazing!</li>
+        </ul>
+      </div>
 
-I use JavaScript and React alongside HTML and CSS to develop responsive, engaging front-end interfaces that prioritize user experience. On the back end, I work with Express and Django in Python to create reliable APIs and server-side functionality, learning to implement best practices for clean and efficient code. I’m comfortable managing databases with PostgreSQL and MySQL, ensuring data is structured and accessible.
-
-Using Git, I maintain organized version control and collaborate effectively on projects. I leverage Postman and Swagger to test and document APIs, ensuring seamless integration between front-end and back-end systems. My portfolio features projects that reflect my ability to tackle challenges, adapt to new tools, and deliver practical solutions as a junior developer.
-
-Explore my work to see my progress and potential. I’m eager to contribute to innovative projects, learn from experienced teams, and grow as a developer. Let’s connect to build something great together!
-        </p>
-        <a href={Amarildo_Gjata_CV} download='CV_A.Gjata.pdf' target='_blank'>
-          <CustomButton title='Download CV'/>
+      <div className="mt-12 w-full max-w-3xl flex flex-col md:flex-row items-center justify-between gap-6">
+        <a
+          href={Amarildo_Gjata_CV}
+          download="Amarildo_Gjata.pdf"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="Download Amarildo Gjata's CV"
+          className="transform transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_var(--main-color)]"
+        >
+          <CostumButton
+            title="Download CV"
+            className="bg-[var(--main-color)] text-black px-6 py-3 rounded-lg transition-colors duration-300 hover:bg-black hover:text-[var(--main-color)] border-2 border-[var(--main-color)]"
+          />
         </a>
 
-        <div className='mt-12 lg:w-1/5 md:1/2 w-1/3 flex justify-between'>
-            <IconContainer link='https://www.facebook.com/share/16NTYmtgfq/' children={<FaFacebookF />}/>
-            <IconContainer link='htttps://www.linkedin.com/in/amarildo-gjata-535a1783' children={<FaLinkedinIn />}/>
-            <IconContainer link='https://github.com/AmarildoGjata' children={<FaGithub />}/>
+        <div className="flex gap-6">
+          <IconContainer
+            link="https://www.facebook.com/share/16NTYmtgfq/"
+            ariaLabel="Visit Amarildo's Facebook profile"
+          >
+            <FaFacebookF className="text-2xl hover:text-[var(--main-color)] hover:scale-110 hover:shadow-[0_0_10px_var(--main-color)] transition-all duration-300" />
+          </IconContainer>
+          <IconContainer
+            link="https://www.linkedin.com/in/amarildo-gjata-535a1783"
+            ariaLabel="Visit Amarildo's LinkedIn profile"
+          >
+            <FaLinkedinIn className="text-2xl hover:text-[var(--main-color)] hover:scale-110 hover:shadow-[0_0_10px_var(--main-color)] transition-all duration-300" />
+          </IconContainer>
+          <IconContainer
+            link="https://github.com/AmarildoGjata"
+            ariaLabel="Visit Amarildo's GitHub profile"
+          >
+            <FaGithub className="text-2xl hover:text-[var(--main-color)] hover:scale-110 hover:shadow-[0_0_10px_var(--main-color)] transition-all duration-300" />
+          </IconContainer>
         </div>
       </div>
+    </section>
+  );
+};
 
-      <div className='md:w-1/2 flex justify-center mt-8'>
-        <img src={main_photo} alt="Fotoja e pare" className='w-3/4 rounded-[50%]' />
-      </div>
-    </div>
-  )
-}
-
-export default Home
+export default Home;
