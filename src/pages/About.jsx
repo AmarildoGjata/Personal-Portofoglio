@@ -1,5 +1,5 @@
-import React from 'react';
-import { FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { memo } from 'react';
+import { FaFacebookF, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import IconContainer from '../components/IconContainer';
 import Box from '../components/Box';
 import Education from '../components/Education';
@@ -19,23 +19,23 @@ const About = () => {
       </h1>
 
       <div className="w-full max-w-3xl flex flex-col gap-6">
-        <div className="bg-gray-900 p-6 rounded-xl border-2 border-[var(--main-color)] shadow-md hover:shadow-lg hover:bg-green-900 hover:text-black transition-all duration-300 ease-in-out">
-          <h2 className="text-xl md:text-2xl font-semibold text-[var(--main-color)] mb-4 group-hover:text-black">
+        <div className="bg-gray-900 p-6 rounded-xl border-2 border-[var(--main-color)] shadow-md hover:shadow-xl hover:bg-green-900 hover:text-black transition-all duration-300 ease-in-out">
+          <h2 className="text-xl md:text-2xl font-semibold text-[var(--main-color)] mb-4">
             Amarildo Gjata
           </h2>
-          <p className="text-base md:text-lg text-gray-200 group-hover:text-black">
+          <p className="text-base md:text-lg text-gray-200">
             I'm a Junior Full-Stack Developer passionate about building responsive, user-friendly web applications. Proficient in the MERN stack and Python frameworks, I focus on creating scalable solutions and thrive in collaborative, innovative environments.
           </p>
         </div>
 
-        <div className="bg-gray-900 p-6 rounded-xl border-2 border-[var(--main-color)] shadow-md hover:shadow-lg hover:bg-green-900 hover:text-black transition-all duration-300 ease-in-out">
-          <h2 className="text-xl md:text-2xl font-semibold text-[var(--main-color)] mb-4 group-hover:text-black">
+        <div className="bg-gray-900 p-6 rounded-xl border-2 border-[var(--main-color)] shadow-md hover:shadow-xl hover:bg-green-900 hover:text-black transition-all duration-300 ease-in-out">
+          <h2 className="text-xl md:text-2xl font-semibold text-[var(--main-color)] mb-4">
             My Skills
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
             {skills.map((skill, index) => (
               <Box
-                key={index}
+                key={skill.property}
                 property={skill.property}
                 value={skill.value}
               />
@@ -43,8 +43,8 @@ const About = () => {
           </div>
         </div>
 
-        <div className="bg-gray-900 p-6 rounded-xl border-2 border-[var(--main-color)] shadow-md hover:shadow-lg hover:bg-green-900 hover:text-black transition-all duration-300 ease-in-out">
-          <h2 className="text-xl md:text-2xl font-semibold text-[var(--main-color)] mb-4 group-hover:text-black">
+        <div className="bg-gray-900 p-6 rounded-xl border-2 border-[var(--main-color)] shadow-md hover:shadow-xl hover:bg-green-900 hover:text-black transition-all duration-300 ease-in-out">
+          <h2 className="text-xl md:text-2xl font-semibold text-[var(--main-color)] mb-4">
             Education
           </h2>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
@@ -55,8 +55,8 @@ const About = () => {
             />
             <Education
               level="Web Development Bootcamp"
-              years="2024-2025"
-              description="Completed an intensive Certification covering full-stack development with Python,Django and PostgreSQL.Ongoing Certification in MERN Stack."
+              years="2024 - 2025"
+              description="Completed an intensive certification covering full-stack development with Python, Django, and PostgreSQL. Ongoing certification in MERN Stack."
             />
           </div>
         </div>
@@ -66,19 +66,19 @@ const About = () => {
             link="https://www.facebook.com/share/16NTYmtgfq/"
             ariaLabel="Visit Amarildo's Facebook profile"
           >
-            <FaFacebookF className="text-xl" />
+            <FaFacebookF className="text-xl hover:text-[var(--main-color)] hover:scale-110 transition-all duration-300" />
           </IconContainer>
           <IconContainer
             link="https://www.linkedin.com/in/amarildo-gjata-535a1783"
             ariaLabel="Visit Amarildo's LinkedIn profile"
           >
-            <FaLinkedinIn className="text-xl" />
+            <FaLinkedinIn className="text-xl hover:text-[var(--main-color)] hover:scale-110 transition-all duration-300" />
           </IconContainer>
           <IconContainer
             link="https://github.com/AmarildoGjata"
             ariaLabel="Visit Amarildo's GitHub profile"
           >
-            <FaGithub className="text-xl" />
+            <FaGithub className="text-xl hover:text-[var(--main-color)] hover:scale-110 transition-all duration-300" />
           </IconContainer>
         </div>
       </div>
@@ -86,4 +86,4 @@ const About = () => {
   );
 };
 
-export default About;
+export default memo(About);

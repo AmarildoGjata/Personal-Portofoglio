@@ -1,5 +1,6 @@
+import { memo } from 'react';
 import main_photo from '../assets/main_photo.jpg';
-import { FaFacebookF, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { FaFacebookF, FaLinkedinIn, FaGithub } from 'react-icons/fa';
 import IconContainer from '../components/IconContainer';
 import Amarildo_Gjata_CV from '../assets/Amarildo_Gjata.pdf';
 import CostumButton from '../components/CostumButton';
@@ -11,8 +12,9 @@ const Home = () => {
         <img
           src={main_photo}
           alt="Amarildo Gjata's profile photo"
-          className="w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full shadow-xl mb-6 transform hover:scale-105 transition-transform duration-300"
+          className="w-40 h-40 md:w-56 md:h-56 lg:w-64 lg:h-64 rounded-full shadow-xl mb-6 hover:scale-105 transition-transform duration-300"
           loading="lazy"
+          fetchpriority="high"
         />
         <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold text-[var(--main-color)]">
           Amarildo Gjata
@@ -22,7 +24,7 @@ const Home = () => {
         </h2>
       </div>
 
-      <div className="mt-12 w-full max-w-3xl bg-gray-900 rounded-xl shadow-lg p-8 transform hover:scale-[1.02] transition-transform duration-300">
+      <div className="mt-12 w-full max-w-3xl bg-gray-900 rounded-xl shadow-lg p-8 hover:scale-[1.02] transition-transform duration-300">
         <h3 className="text-xl md:text-2xl font-semibold text-[var(--main-color)] mb-4 text-center">
           About Me
         </h3>
@@ -31,22 +33,22 @@ const Home = () => {
           <li>Creating robust APIs using <strong>Express</strong>, <strong>Django</strong>, and <strong>Python</strong>.</li>
           <li>Managing data efficiently with <strong>PostgreSQL</strong> and <strong>MySQL</strong>.</li>
           <li>Collaborating seamlessly with <strong>Git</strong>, <strong>Postman</strong>, and <strong>Swagger</strong>.</li>
-          <li>Ready to contribute to innovative projects—let’s create something amazing!</li>
+          <li>Ready to contribute to innovative projects—let's create something amazing!</li>
         </ul>
       </div>
 
       <div className="mt-12 w-full max-w-3xl flex flex-col md:flex-row items-center justify-between gap-6">
         <a
           href={Amarildo_Gjata_CV}
-          download="Amarildo_Gjata.pdf"
+          download="Amarildo_Gjata_CV.pdf"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Download Amarildo Gjata's CV"
-          className="transform transition-all duration-300 hover:scale-105 hover:shadow-[0_0_20px_var(--main-color)]"
+          className="hover:scale-105 hover:shadow-[0_0_20px_var(--main-color)] transition-all duration-300"
         >
           <CostumButton
             title="Download CV"
-            className="bg-[var(--main-color)] text-black px-6 py-3 rounded-lg transition-colors duration-300 hover:bg-black hover:text-[var(--main-color)] border-2 border-[var(--main-color)]"
+            className="bg-[var(--main-color)] text-black px-6 py-3 rounded-lg hover:bg-black hover:text-[var(--main-color)] border-2 border-[var(--main-color)] transition-colors duration-300"
           />
         </a>
 
@@ -75,4 +77,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default memo(Home);
