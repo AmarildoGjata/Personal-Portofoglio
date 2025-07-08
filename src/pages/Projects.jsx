@@ -11,6 +11,7 @@ const projects = [
   },
   {
     title: 'Software Quality Assurance - SD Worx Italy',
+    url: 'https://www.sdworx.com/',
     description:
       'Worked as a QA specialist on My Area SD Worx, a complex HR and finance software suite. Responsible for test planning, writing test cases, bug tracking, and performing functional, performance, and regression testing.',
   },
